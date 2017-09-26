@@ -4,6 +4,8 @@ package practice.framework.temptest;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 import practice.framework.resources.FramerorkProperties;
+import practice.framework.webdriver.WebDriverFactory;
+import practice.framework.webdriver.WebDriverInstanceInit;
 
 
 public class TempTest extends TestBase{
@@ -65,11 +67,12 @@ public class TempTest extends TestBase{
 	
 	
 	
-//	public static void main(String[] args) {
+	//public static void main(String[] args) {
 //		WebDriverFactory.initWebdriverInstance("CH");
 //		//frameworkDriver.createWebDriverInstance();
 //		WebDriverInstanceInit.getWebdriver().get("https://habrahabr.ru/post/30444/");
 //		WebDriverInstanceInit.getWebdriver().quit();
+		
 		
 //		FramerorkProperties properties = new FramerorkProperties();
 //		properties.initiateProperties();
