@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Log Suite Example" verbose="1">
+	<listeners>
+		<listener class-name="practice.framework.utils.FrameworkListener" />
+	</listeners>
+
+	<test name="TestNG logs sample" preserve-order="true">
+		<classes>
+			<class name="practice.framework.temptest.TempTest">
+				<methods>
+					<include name="methodAddingNumbers" />
+					<include name="dividedByZero" />
+					<include name="methodSkip" />
+					<include name="test4" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>
