@@ -3,8 +3,12 @@
  */
 package practice.framework.temptest;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
+import practice.framework.resources.FramerorkProperties;
+import practice.framework.webdriver.WebDriverFactory;
+import practice.framework.webdriver.WebDriverInstanceInit;
 
 /**
  * @author Dzmitry_Malchanau
@@ -12,19 +16,22 @@ import org.testng.annotations.BeforeMethod;
  */
 public class TestBase {
 
-	@BeforeMethod
+	@BeforeClass 
 	 
 	  public void beforeMethod() {
+		FramerorkProperties.initiateProperties();
+		WebDriverFactory.initWebdriverInstance(FramerorkProperties.getBrowserName());
+		
 	 
-		  System.out.println("Execution of Before method is carring on");
+		  System.out.println("Execution of Before method is carring on");//replace with logger
 	 
 	  }
 	 
-	  @AfterMethod
+	  @AfterClass
 	 
 	  public void afterMethod() {
-	 
-		  System.out.println("Execution of After method is carring on");
+		  WebDriverInstanceInit.getWebdriver().quit();
+		  System.out.println("Execution of After method is carring on");//replace with logger
 	 
 	  }
 	

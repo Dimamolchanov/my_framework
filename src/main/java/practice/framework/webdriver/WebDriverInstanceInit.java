@@ -3,6 +3,7 @@ package practice.framework.webdriver;
 
 import org.openqa.selenium.WebDriver;
 
+
 public abstract class WebDriverInstanceInit {
 	protected static WebDriver webdriver;
 
@@ -11,7 +12,15 @@ public abstract class WebDriverInstanceInit {
 	}
 
 	public static WebDriver getWebdriver() {
+		try {
 		return webdriver;
+		}
+		catch (NullPointerException e){
+			e.getMessage();
+			//Logger.error("ERROR: Webdriver is null");
+			return null;
+			
+		}
 	}
 
 	/**

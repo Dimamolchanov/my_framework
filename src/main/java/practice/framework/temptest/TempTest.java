@@ -2,6 +2,7 @@
 package practice.framework.temptest;
 
 import org.testng.annotations.Test;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 import practice.framework.resources.FramerorkProperties;
 import practice.framework.webdriver.WebDriverFactory;
@@ -67,11 +68,10 @@ public class TempTest extends TestBase{
 	
 	
 	
-	//public static void main(String[] args) {
-//		WebDriverFactory.initWebdriverInstance("CH");
-//		//frameworkDriver.createWebDriverInstance();
-//		WebDriverInstanceInit.getWebdriver().get("https://habrahabr.ru/post/30444/");
-//		WebDriverInstanceInit.getWebdriver().quit();
+	public static void main(String[] args) {
+		
+		WebDriverInstanceInit.getWebdriver().get(FramerorkProperties.getServerURL());
+		
 		
 		
 //		FramerorkProperties properties = new FramerorkProperties();
@@ -80,6 +80,6 @@ public class TempTest extends TestBase{
 //		System.out.println(properties.getNestNGFilePAth());
 //		System.out.println(properties.getServerURL());
 		
-	//	}
+		}
 
 }

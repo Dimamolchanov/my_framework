@@ -12,7 +12,7 @@ import org.testng.ITestResult;
  * @author Dzmitry_Malchanau
  *
  */
-public class FrameworkListener implements ITestListener, ISuiteListener, IInvokedMethodListener{
+public class FrameworkListener extends WebDriverHandler implements ITestListener, ISuiteListener, IInvokedMethodListener{
 
 	
 	public void afterInvocation(IInvokedMethod method, ITestResult result) {
@@ -70,7 +70,7 @@ public class FrameworkListener implements ITestListener, ISuiteListener, IInvoke
 
 	
 	public void onTestFailure(ITestResult testResult) {
-		
+		captureScreenShot();
 		//testResult.getThrowable().printStackTrace();
 		
 	}

@@ -11,6 +11,7 @@ import java.util.Properties;
  * @author Dzmitry_Malchanau
  *
  */
+//опять же статик всё, насколько это ок?
 public class PropertiesLoader {
 	private static Properties properties;
 	private static String propirtiesFileName = String.format("properties/configuration.properties");

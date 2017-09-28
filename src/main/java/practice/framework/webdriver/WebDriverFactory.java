@@ -6,7 +6,7 @@ public class WebDriverFactory {
 	 * returns instance of the appropriate webdriver
 	 */
 	public static WebDriverInstanceInit initWebdriverInstance(String browserName) {
-		if (browserName.equals("CH")) {
+		if (browserName.equals("chrome")) {
 			return new ChromeWebdriverInstance();
 
 		} else if (browserName.equals("FF")) {
