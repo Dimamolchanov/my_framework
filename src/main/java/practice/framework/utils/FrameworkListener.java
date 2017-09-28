@@ -12,84 +12,61 @@ import org.testng.ITestResult;
  * @author Dzmitry_Malchanau
  *
  */
-public class FrameworkListener extends WebDriverHandler implements ITestListener, ISuiteListener, IInvokedMethodListener{
+public class FrameworkListener extends WebDriverHandler
+		implements ITestListener, ISuiteListener, IInvokedMethodListener {
 
-	
 	public void afterInvocation(IInvokedMethod method, ITestResult result) {
-		//System.out.println("-----AFTER INVOKATION-----"+method.getTestMethod().getMethodName());
-//		switch (result.getStatus()){
-//		case 1:
-//			System.out.println("Success");
-//			break;
-//		case 2:
-//			System.out.println("Failed");
-//			break;
-//		case 3:
-//			System.out.println("Skipped");
-//			break;
-//			default:
-//				System.out.println("Default");
-		
-		}
-		
-//	}
+		// System.out.println("Default");
 
-		public void beforeInvocation(IInvokedMethod arg0, ITestResult arg1) {
-//			System.out.println("-----BEFORE INVOKATION-----");
-		
 	}
 
-	
+	public void beforeInvocation(IInvokedMethod arg0, ITestResult arg1) {
+		// System.out.println("-----BEFORE INVOKATION-----");
+
+	}
+
 	public void onFinish(ISuite arg0) {
-		//System.out.println("-----ON FINISH SUITE "+arg0.getName());
-		
+		// System.out.println("-----ON FINISH SUITE "+arg0.getName());
+
 	}
 
-	
 	public void onStart(ISuite arg0) {
-		//System.out.println("-----ON START SUITE "+arg0.getName());
-		
+		// System.out.println("-----ON START SUITE "+arg0.getName());
+
 	}
 
-	
 	public void onFinish(ITestContext arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	
 	public void onStart(ITestContext arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	
 	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
-				
+
 	}
 
-	
 	public void onTestFailure(ITestResult testResult) {
 		captureScreenShot();
-		//testResult.getThrowable().printStackTrace();
-		
+		// testResult.getThrowable().printStackTrace();
+
 	}
 
-	
 	public void onTestSkipped(ITestResult arg0) {
-		
-		
+
 	}
 
 	public void onTestStart(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	
 	public void onTestSuccess(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
