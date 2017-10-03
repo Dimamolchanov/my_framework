@@ -10,8 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
  *
  */
 public interface SeleniumUtilsI {
-	String SCREENSHOTS_PATH = "test-output/screenshots";
-
+	
 	public TakesScreenshot initScreenShotcapture();
 
 	/**

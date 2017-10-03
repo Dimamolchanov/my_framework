@@ -35,8 +35,19 @@ public class FrameworkListener extends WebDriverHandler
 
 	}
 
-	public void onFinish(ITestContext arg0) {
-		// TODO Auto-generated method stub
+	public void onFinish(ITestContext testContext) {
+        System.out.println("dsdSDSDSDSDSDSDSDSDSDSDSDDSD");
+		Logger.info("PASSED TEST CASES");
+//		testContext.getPassedTests().getAllResults().forEach(result -> {
+//			Logger.info(result.getName());
+//		});
+//
+//		Logger.info("FAILED TEST CASES");
+//		testContext.getFailedTests().getAllResults().forEach(result -> {
+//			Logger.info(result.getName());
+//		});
+//
+//		Logger.info("Test completed on: " + testContext.getEndDate().toString());
 
 	}
 
@@ -51,11 +62,12 @@ public class FrameworkListener extends WebDriverHandler
 
 	public void onTestFailure(ITestResult testResult) {
 		captureScreenShot();
-		// testResult.getThrowable().printStackTrace();
+		//testResult.getThrowable().printStackTrace();
 
 	}
 
 	public void onTestSkipped(ITestResult arg0) {
+		Logger.info("");
 
 	}
 

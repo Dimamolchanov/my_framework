@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Log Suite Example" verbose="1">
 	<listeners>
-		<listener class-name="practice.framework.utils.FrameworkListener" />
+	 <listener class-name="practice.framework.utils.FrameworkListener"/>
 	</listeners>
 
 	<test name="TestNG logs sample" preserve-order="true">

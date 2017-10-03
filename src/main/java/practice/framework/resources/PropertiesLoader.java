@@ -14,15 +14,14 @@ import java.util.Properties;
 // опять же статик всё, насколько это ок?
 public class PropertiesLoader {
 	private static Properties properties;
-	private static String propirtiesFileName = String.format("properties/configuration.properties");
+	private static  String propirtiesFileName = String.format("properties/configuration.properties");
 
 	private PropertiesLoader() {
 	}
 
-	private static Properties loadProperties() {
+	public static  Properties loadProperties() {
 
 		if (properties == null) {
-			// add logging
 			properties = new Properties();
 
 			try {

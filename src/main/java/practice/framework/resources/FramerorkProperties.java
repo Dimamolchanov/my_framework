@@ -2,19 +2,26 @@ package practice.framework.resources;
 
 /**
  * @author Dzmitry_Malchanau
- *
+ * 
  */
 
 //статик реализация - насколько это хорошо? может лучше создавать объект и инициализировать
 public class FramerorkProperties {
-	public static String serverURL;
-	public static String testNGFile;
-	public static String browserName;
+	
+	private static final String PROPERTY_SERVER_URL ="serverURL";
+	private static final String PROPERTY_TEST_NG ="nestNGFilePath";
+	private static final String PROPERTY_BROWSER_NAME ="browserName";
+	
+		
+	private static String serverURL;
+	private static String testNGFile;
+	private static String browserName;
+	
     //насколько целесообразно инициализировать все проперти? - можно ли простов ызывать их по мере надобности из класса PropertiesLoader?
 	public static void initiateProperties() {
-		FramerorkProperties.serverURL = PropertiesLoader.getProperty("serverURL");//replace with the constant
-		FramerorkProperties.testNGFile = PropertiesLoader.getProperty("nestNGFilePAth");//replace with the constant
-		FramerorkProperties.browserName = PropertiesLoader.getProperty("browserName");//replace with the constant
+		FramerorkProperties.serverURL = PropertiesLoader.getProperty(PROPERTY_SERVER_URL);//replace with the constant
+		FramerorkProperties.testNGFile = PropertiesLoader.getProperty(PROPERTY_TEST_NG);//replace with the constant
+		FramerorkProperties.browserName = PropertiesLoader.getProperty(PROPERTY_BROWSER_NAME);//replace with the constant
 
 	}
 
@@ -22,7 +29,7 @@ public class FramerorkProperties {
 		return serverURL;
 	}
 
-	public static String getNestNGFilePAth() {
+	public static String getTestNGFile() {
 		return testNGFile;
 	}
 
