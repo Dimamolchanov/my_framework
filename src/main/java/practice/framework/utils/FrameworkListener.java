@@ -16,6 +16,7 @@ public class FrameworkListener extends WebDriverHandler
 		implements ITestListener, ISuiteListener, IInvokedMethodListener {
 
 	public void afterInvocation(IInvokedMethod method, ITestResult result) {
+		Logger.info("FUCKING YEEEEP");
 		// System.out.println("Default");
 
 	}
@@ -36,18 +37,24 @@ public class FrameworkListener extends WebDriverHandler
 	}
 
 	public void onFinish(ITestContext testContext) {
-        System.out.println("dsdSDSDSDSDSDSDSDSDSDSDSDDSD");
-		Logger.info("PASSED TEST CASES");
-//		testContext.getPassedTests().getAllResults().forEach(result -> {
-//			Logger.info(result.getName());
-//		});
-//
-//		Logger.info("FAILED TEST CASES");
-//		testContext.getFailedTests().getAllResults().forEach(result -> {
-//			Logger.info(result.getName());
-//		});
-//
-//		Logger.info("Test completed on: " + testContext.getEndDate().toString());
+		Logger.info("PASSED TEST CASES:");
+		testContext.getPassedTests().getAllResults().forEach(result -> {
+			Logger.info(result.getName());
+		});
+
+		Logger.info("FAILED TEST CASES:");
+		testContext.getFailedTests().getAllResults().forEach(result -> {
+			Logger.info(result.getName());
+		});
+		
+		Logger.info("SKIPPED TEST CASES:");
+		testContext.getSkippedTests().getAllResults().forEach(result ->{
+			
+			Logger.info(result.getName());
+		});
+
+		Logger.info("Test completed on: " + testContext.getEndDate().toString());
+		
 
 	}
 
@@ -67,7 +74,7 @@ public class FrameworkListener extends WebDriverHandler
 	}
 
 	public void onTestSkipped(ITestResult arg0) {
-		Logger.info("");
+		Logger.info("Test Skipped");
 
 	}
 

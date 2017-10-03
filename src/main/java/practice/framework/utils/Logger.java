@@ -5,8 +5,6 @@ package practice.framework.utils;
 
 import org.apache.log4j.Level;
 
-
-
 /**
  * Class for logging
  * @author Dzmitry Malchanau

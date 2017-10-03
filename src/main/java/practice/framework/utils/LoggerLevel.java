@@ -6,7 +6,9 @@ package practice.framework.utils;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
 import org.apache.log4j.Level;
+
 
 /**
  * Logger level definition class

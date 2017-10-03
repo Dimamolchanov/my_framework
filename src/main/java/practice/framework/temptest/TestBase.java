@@ -22,8 +22,7 @@ public class TestBase {
 	 
 	  public void beforeMethod() {
 		FramerorkProperties.initiateProperties();
-		
-		Logger.setLoggerLevel(0);
+		Logger.setLoggerLevel(Integer.parseInt(FramerorkProperties.getLoggerLevel()));
 		WebDriverFactory.initWebdriverInstance(FramerorkProperties.getBrowserName());
 		
 	 
@@ -36,7 +35,7 @@ public class TestBase {
 	  public void afterMethod() {
 		  WebDriverInstanceInit.getWebdriver().quit();//add exception
 		  Logger.info("Execution of After method is carring on");
-	 
+	      
 	  }
 	
 }

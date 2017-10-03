@@ -1,0 +1,16 @@
+[2017-10-03 17:31:47]  INFO - Test properties are being initialising...
+[2017-10-03 17:31:51]  INFO - Execution of Before method is carring on
+[2017-10-03 17:31:51]  INFO - FUCKING YEEEEP
+[2017-10-03 17:31:51]  INFO - FUCKING YEEEEP
+[2017-10-03 17:31:51]  INFO - FUCKING YEEEEP
+[2017-10-03 17:31:51]  INFO - FUCKING YEEEEP
+[2017-10-03 17:31:51]  INFO - Test Skipped
+[2017-10-03 17:31:52]  INFO - Execution of After method is carring on
+[2017-10-03 17:31:52]  INFO - FUCKING YEEEEP
+[2017-10-03 17:31:52]  INFO - PASSED TEST CASES:
+[2017-10-03 17:31:52]  INFO - methodAddingNumbers
+[2017-10-03 17:31:52]  INFO - FAILED TEST CASES:
+[2017-10-03 17:31:52]  INFO - dividedByZero
+[2017-10-03 17:31:52]  INFO - SKIPPED TEST CASES:
+[2017-10-03 17:31:52]  INFO - methodSkip
+[2017-10-03 17:31:52]  INFO - Test completed on: Tue Oct 03 17:31:52 MSK 2017
