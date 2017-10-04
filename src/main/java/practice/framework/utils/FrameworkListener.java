@@ -16,13 +16,14 @@ public class FrameworkListener extends WebDriverHandler
 		implements ITestListener, ISuiteListener, IInvokedMethodListener {
 
 	public void afterInvocation(IInvokedMethod method, ITestResult result) {
-		Logger.info("FUCKING YEEEEP");
-		// System.out.println("Default");
+		Logger.info("Starting Test "+method.getTestMethod().getMethodName()+" invoketion...");
+		
 
 	}
 
-	public void beforeInvocation(IInvokedMethod arg0, ITestResult arg1) {
-		// System.out.println("-----BEFORE INVOKATION-----");
+	public void beforeInvocation(IInvokedMethod method, ITestResult result) {
+		Logger.info("Test "+method.getTestMethod().getMethodName()+" invoked");
+		Logger.info("Result "+result.getStatus()); 
 
 	}
 
@@ -74,7 +75,7 @@ public class FrameworkListener extends WebDriverHandler
 	}
 
 	public void onTestSkipped(ITestResult arg0) {
-		Logger.info("Test Skipped");
+		Logger.info("Test "+arg0.getName() +" Skipped");
 
 	}
 
