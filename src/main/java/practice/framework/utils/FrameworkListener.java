@@ -16,15 +16,14 @@ public class FrameworkListener extends WebDriverHandler
 		implements ITestListener, ISuiteListener, IInvokedMethodListener {
 
 	public void afterInvocation(IInvokedMethod method, ITestResult result) {
-		Logger.info("Starting Test "+method.getTestMethod().getMethodName()+" invoketion...");
-		
+
+		Logger.info("TEST " + method.getTestMethod().getMethodName() + " invoked");
+		Logger.info("Result " + result.getStatus());
 
 	}
 
 	public void beforeInvocation(IInvokedMethod method, ITestResult result) {
-		Logger.info("Test "+method.getTestMethod().getMethodName()+" invoked");
-		Logger.info("Result "+result.getStatus()); 
-
+		Logger.info("Starting Test " + method.getTestMethod().getMethodName() + " invoketion...");
 	}
 
 	public void onFinish(ISuite arg0) {
@@ -38,6 +37,7 @@ public class FrameworkListener extends WebDriverHandler
 	}
 
 	public void onFinish(ITestContext testContext) {
+		Logger.info("EXECUTION SUMMARY:");
 		Logger.info("PASSED TEST CASES:");
 		testContext.getPassedTests().getAllResults().forEach(result -> {
 			Logger.info(result.getName());
@@ -47,10 +47,10 @@ public class FrameworkListener extends WebDriverHandler
 		testContext.getFailedTests().getAllResults().forEach(result -> {
 			Logger.info(result.getName());
 		});
-		
+
 		Logger.info("SKIPPED TEST CASES:");
-		testContext.getSkippedTests().getAllResults().forEach(result ->{
-			
+		testContext.getSkippedTests().getAllResults().forEach(result -> {
+
 			Logger.info(result.getName());
 		});
 
@@ -60,7 +60,7 @@ public class FrameworkListener extends WebDriverHandler
 	}
 
 	public void onStart(ITestContext arg0) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
@@ -70,12 +70,12 @@ public class FrameworkListener extends WebDriverHandler
 
 	public void onTestFailure(ITestResult testResult) {
 		captureScreenShot();
-		//testResult.getThrowable().printStackTrace();
+		// testResult.getThrowable().printStackTrace();
 
 	}
 
 	public void onTestSkipped(ITestResult arg0) {
-		Logger.info("Test "+arg0.getName() +" Skipped");
+		Logger.info("TEST " + arg0.getName() + " Skipped");
 
 	}
 

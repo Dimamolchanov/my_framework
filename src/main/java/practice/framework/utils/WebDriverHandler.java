@@ -19,7 +19,7 @@ import practice.framework.webdriver.WebDriverInstanceInit;
  * @author Dzmitry_Malchanau
  *
  */
-public class WebDriverHandler {
+public class WebDriverHandler implements SeleniumUtilsI{
 	/**
 	 * Private constatns for the class
 	 */

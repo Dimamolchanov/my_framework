@@ -1,16 +1,23 @@
-[2017-10-04 12:53:54]  INFO - Test properties are being initialising...
-[2017-10-04 12:53:57]  INFO - Execution of Before method is carring on
-[2017-10-04 12:53:57]  INFO - FUCKING YEEEEP
-[2017-10-04 12:53:57]  INFO - FUCKING YEEEEP
-[2017-10-04 12:53:57]  INFO - FUCKING YEEEEP
-[2017-10-04 12:53:57]  INFO - FUCKING YEEEEP
-[2017-10-04 12:53:57]  INFO - Test Skipped
-[2017-10-04 12:53:58]  INFO - Execution of After method is carring on
-[2017-10-04 12:53:58]  INFO - FUCKING YEEEEP
-[2017-10-04 12:53:58]  INFO - PASSED TEST CASES:
-[2017-10-04 12:53:58]  INFO - methodAddingNumbers
-[2017-10-04 12:53:58]  INFO - FAILED TEST CASES:
-[2017-10-04 12:53:58]  INFO - dividedByZero
-[2017-10-04 12:53:58]  INFO - SKIPPED TEST CASES:
-[2017-10-04 12:53:58]  INFO - methodSkip
-[2017-10-04 12:53:58]  INFO - Test completed on: Wed Oct 04 12:53:58 MSK 2017
+[2017-10-05 13:52:53]  INFO - Starting Test beforeMethod invoketion...
+[2017-10-05 13:52:53]  INFO - Test properties are being initialising...
+[2017-10-05 13:52:56]  INFO - TEST beforeMethod invoked
+[2017-10-05 13:52:56]  INFO - Result 1
+[2017-10-05 13:52:56]  INFO - Starting Test methodAddingNumbers invoketion...
+[2017-10-05 13:52:56]  INFO - TEST methodAddingNumbers invoked
+[2017-10-05 13:52:56]  INFO - Result 1
+[2017-10-05 13:52:56]  INFO - Starting Test dividedByZero invoketion...
+[2017-10-05 13:52:56]  INFO - TEST dividedByZero invoked
+[2017-10-05 13:52:56]  INFO - Result 2
+[2017-10-05 13:52:56]  INFO - TEST methodSkip Skipped
+[2017-10-05 13:52:56]  INFO - Starting Test afterMethod invoketion...
+[2017-10-05 13:52:56]  INFO - Closing webdriver instance.
+[2017-10-05 13:52:57]  INFO - TEST afterMethod invoked
+[2017-10-05 13:52:57]  INFO - Result 1
+[2017-10-05 13:52:57]  INFO - EXECUTION SUMMARY:
+[2017-10-05 13:52:57]  INFO - PASSED TEST CASES:
+[2017-10-05 13:52:57]  INFO - methodAddingNumbers
+[2017-10-05 13:52:57]  INFO - FAILED TEST CASES:
+[2017-10-05 13:52:57]  INFO - dividedByZero
+[2017-10-05 13:52:57]  INFO - SKIPPED TEST CASES:
+[2017-10-05 13:52:57]  INFO - methodSkip
+[2017-10-05 13:52:57]  INFO - Test completed on: Thu Oct 05 13:52:57 MSK 2017
