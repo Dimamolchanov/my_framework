@@ -10,19 +10,23 @@ import practice.framework.resources.FramerorkProperties;
  */
 public class WebDriverManager {
 
-    private WebDriverManager(){};
-    private static WebDriver driver;
+	private WebDriverManager() {
+	};
 
-	public static  WebDriver getWebdriver() {
-		if (driver == null){
-			driver = WebDriverFactory.initWebdriverInstance(FramerorkProperties.getBrowserName()).createWebDriverInstance();
-		return driver;	
+	private static WebDriver driver;
+
+	public static WebDriver getWebdriver() {
+		if (driver == null) {
+			driver = WebDriverFactory.initWebdriverInstance(FramerorkProperties.getBrowserName())
+					.createWebDriverInstance();
+
+			return driver;
 		}
-		
+
 		return driver;
 	}
-	
-	public static void killWebdriver(){
+
+	public static void killWebdriver() {
 		driver.quit();
-			}
+	}
 }
