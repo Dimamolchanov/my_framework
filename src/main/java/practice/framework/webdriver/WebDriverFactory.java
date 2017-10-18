@@ -6,7 +6,7 @@ public class WebDriverFactory {
 	
 	private static final String CHROME = "chrome";
 	private static final String FIREFOX = "FF";
-
+    
 	/**
 	 * returns instance of the appropriate webdriver
 	 */

@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriverException;
 
 import practice.framework.resources.FramerorkProperties;
 import practice.framework.webdriver.WebDriverInstanceInit;
+import practice.framework.webdriver.WebDriverManager;
 
 /**
  * @author Dzmitry_Malchanau
@@ -27,7 +28,7 @@ public class WebDriverHandler implements SeleniumUtilsI{
 	private static final String DATE_FORMAT_YYYY_MM_DD_HH_MM_SS = "yyyy_MM_dd_HH_mm_ss";
 
 	public TakesScreenshot initScreenShotcapture() {
-		TakesScreenshot ts = (TakesScreenshot) WebDriverInstanceInit.getWebdriver();
+		TakesScreenshot ts = (TakesScreenshot) WebDriverManager.getWebdriver();
 
 		return ts;
 	}
@@ -77,7 +78,7 @@ public class WebDriverHandler implements SeleniumUtilsI{
 	public void chooseOkOnNextConfirmation() {
 		try {
 			Logger.debug("choose Ok On Next Confirmation");
-			Alert alert = WebDriverInstanceInit.getWebdriver().switchTo().alert();
+			Alert alert = WebDriverManager.getWebdriver().switchTo().alert();
 			alert.accept();
 		} catch (Exception e) {
 			Logger.error("'Ok' was not chosen on confirmation -> ERROR!");
@@ -92,7 +93,7 @@ public class WebDriverHandler implements SeleniumUtilsI{
 	public String getAlert() {
 		try {
 			Logger.debug("Trying to get alert");
-			return WebDriverInstanceInit.getWebdriver().switchTo().alert().getText();
+			return WebDriverManager.getWebdriver().switchTo().alert().getText();
 		} catch (Exception e) {
 			Logger.error("Alert text was not retrieved -> ERROR!");
 			throw new RuntimeException(e.getMessage());
@@ -102,7 +103,7 @@ public class WebDriverHandler implements SeleniumUtilsI{
 	public boolean isAlertPresent() {
 		Logger.debug("Verify if alert is present.");
 		try {
-			WebDriverInstanceInit.getWebdriver().switchTo().alert();
+			WebDriverManager.getWebdriver().switchTo().alert();
 			return true;
 		} catch (NoAlertPresentException ex) {
 			return false;

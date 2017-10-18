@@ -17,6 +17,8 @@ import practice.framework.utils.FrameworkListener;
  * @author Dzmitry_Malchanau
  *
  */
+
+//re -write the class
 public class TempTESTNGtest {
 	
 	public static void main(String[] args) {
@@ -36,7 +38,7 @@ public class TempTESTNGtest {
 		List<XmlSuite> suites = new ArrayList<XmlSuite>();
 		suites.add(customSuite);
 		testNg.setXmlSuites(suites);
-		testNg.addListener(frameworkListener);
+		//testNg.addListener(frameworkListener); to investigate
 		testNg.run();
 		
 		}

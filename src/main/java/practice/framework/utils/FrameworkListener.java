@@ -70,7 +70,7 @@ public class FrameworkListener extends WebDriverHandler
 
 	public void onTestFailure(ITestResult testResult) {
 		captureScreenShot();
-		// testResult.getThrowable().printStackTrace();
+	    // testResult.getThrowable().printStackTrace(); temporary commented since a lot of exceptions in log output - comment out when in 'prod'
 
 	}
 
